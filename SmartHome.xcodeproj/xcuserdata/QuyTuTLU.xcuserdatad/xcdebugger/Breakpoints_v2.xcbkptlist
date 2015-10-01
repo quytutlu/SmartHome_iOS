@@ -94,7 +94,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "init(idThietBi:TenThietBi:TrangThai:)"
+            landmarkName = "init(idThietBi:TenThietBi:TrangThai:ReadOnly:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,7 +110,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "init(idThietBi:TenThietBi:TrangThai:)"
+            landmarkName = "init(idThietBi:TenThietBi:TrangThai:ReadOnly:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,11 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartHome/DsThietBiTableViewController.swift"
-            timestampString = "465405638.428903"
+            timestampString = "465406627.335865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "ChuyenTrangThaiThietBi(_:idThietBi:)"
             landmarkType = "5">
          </BreakpointContent>

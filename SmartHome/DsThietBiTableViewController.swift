@@ -81,7 +81,7 @@ class DsThietBiTableViewController: UITableViewController {
         lbThietBi.text=ListThietBi[indexPath.row].TenThietBi
         cell.addSubview(lbThietBi)
         if(ListThietBi[indexPath.row].ReadOnly=="0"){
-            let swTrangThai:UISwitch=UISwitch(frame: CGRectMake(300, 10, 50, 30))
+            let swTrangThai:UISwitch=UISwitch(frame: CGRectMake(650, 5, 50, 30))
             if(ListThietBi[indexPath.row].TrangThai=="1"){
                 swTrangThai.on=true
             }
@@ -91,10 +91,11 @@ class DsThietBiTableViewController: UITableViewController {
             swTrangThai.addTarget(self, action: "BatTatThietBi:", forControlEvents: .ValueChanged)
             cell.addSubview(swTrangThai)
         }else{
-            let lbTrangThai:UILabel=UILabel(frame: CGRectMake(300, 10, 50, 30))
+            let lbTrangThai:UILabel=UILabel(frame: CGRectMake(650, 10, 50, 20))
             lbTrangThai.text=ListThietBi[indexPath.row].TrangThai
             cell.addSubview(lbTrangThai)
         }
+        cell.selectionStyle=UITableViewCellSelectionStyle.None
         return cell
     }
     func BatTatThietBi(sender:UISwitch){

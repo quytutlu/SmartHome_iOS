@@ -15,6 +15,9 @@
 		7EB5F9831BBC3B5300E8E1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F9821BBC3B5300E8E1BD /* Assets.xcassets */; };
 		7EB5F9861BBC3B5300E8E1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F9841BBC3B5300E8E1BD /* LaunchScreen.storyboard */; };
 		7EB5F98E1BBC3C6D00E8E1BD /* DsThietBiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F98D1BBC3C6D00E8E1BD /* DsThietBiTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7EC3B0851BBDA1260076C931 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0821BBDA1260076C931 /* Icon-Small.png */; settings = {ASSET_TAGS = (); }; };
+		7EC3B0861BBDA1260076C931 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */; settings = {ASSET_TAGS = (); }; };
+		7EC3B0871BBDA1260076C931 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		7EB5F9851BBC3B5300E8E1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EB5F9871BBC3B5300E8E1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EB5F98D1BBC3C6D00E8E1BD /* DsThietBiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DsThietBiTableViewController.swift; sourceTree = "<group>"; };
+		7EC3B0821BBDA1260076C931 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 		7EB5F97A1BBC3B5300E8E1BD /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				7EC3B0821BBDA1260076C931 /* Icon-Small.png */,
+				7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */,
+				7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */,
 				7E82FEF91BBCF87600E21780 /* ThietBi.swift */,
 				7EB5F97B1BBC3B5300E8E1BD /* AppDelegate.swift */,
 				7EB5F97D1BBC3B5300E8E1BD /* ViewController.swift */,
@@ -131,8 +140,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC3B0871BBDA1260076C931 /* Icon-Small@3x.png in Resources */,
+				7EC3B0851BBDA1260076C931 /* Icon-Small.png in Resources */,
 				7EB5F9861BBC3B5300E8E1BD /* LaunchScreen.storyboard in Resources */,
 				7EB5F9831BBC3B5300E8E1BD /* Assets.xcassets in Resources */,
+				7EC3B0861BBDA1260076C931 /* Icon-Small@2x.png in Resources */,
 				7EB5F9811BBC3B5300E8E1BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +276,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quytutlu.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +291,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = quytutlu.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
