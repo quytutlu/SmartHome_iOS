@@ -89,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartHome/ThietBi.swift"
-            timestampString = "465372243.678253"
+            timestampString = "465404277.29248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "init(idThietBi:TenThietBi:TrangThai:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,12 +104,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmartHome/DsThietBiTableViewController.swift"
-            timestampString = "465392421.053074"
+            filePath = "SmartHome/ThietBi.swift"
+            timestampString = "465404277.29248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init(idThietBi:TenThietBi:TrangThai:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartHome/DsThietBiTableViewController.swift"
+            timestampString = "465405638.428903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "ChuyenTrangThaiThietBi(_:idThietBi:)"
             landmarkType = "5">
          </BreakpointContent>

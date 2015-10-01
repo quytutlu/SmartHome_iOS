@@ -12,20 +12,24 @@ class ThietBi {
     var idThietBi:String
     var TenThietBi:String
     var TrangThai:String
+    var ReadOnly:String
     init(){
         idThietBi=""
         TenThietBi="quytutlu"
         TrangThai=""
+        ReadOnly=""
     }
-    init(idThietBi:String,TenThietBi:String,TrangThai:String){
+    init(idThietBi:String,TenThietBi:String,TrangThai:String,ReadOnly:String){
         self.idThietBi=idThietBi
         self.TenThietBi=TenThietBi
         self.TrangThai=TrangThai
+        self.ReadOnly=ReadOnly
     }
-    func SetThuocTinh(idThietBi:String,TenThietBi:String,TrangThai:String){
+    func SetThuocTinh(idThietBi:String,TenThietBi:String,TrangThai:String,ReadOnly:String){
         self.idThietBi=idThietBi
         self.TenThietBi=TenThietBi
         self.TrangThai=TrangThai
+        self.ReadOnly=ReadOnly
     }
     func Display(){
         print("TenThietBi: "+self.TenThietBi+"\n")

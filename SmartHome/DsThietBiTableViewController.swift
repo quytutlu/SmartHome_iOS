@@ -13,10 +13,11 @@ class DsThietBiTableViewController: UITableViewController {
     var idThietBi:[String]=[]
     var dem:Int=0
     var ThamSoTruyen:NSUserDefaults!
+    var idNguoiDung:String!
     override func viewDidLoad() {
         super.viewDidLoad()
         ThamSoTruyen=NSUserDefaults()
-        let idNguoiDung:String=ThamSoTruyen.valueForKey("idNguoiDung") as! String
+        idNguoiDung=ThamSoTruyen.valueForKey("idNguoiDung") as! String
         let urlString = "http://smarthometl.com/index.php?cmd=laytrangthai&id="+idNguoiDung
         LayDanhSachThietBi(urlString)
         let refreshControl = UIRefreshControl()
@@ -24,8 +25,11 @@ class DsThietBiTableViewController: UITableViewController {
         self.refreshControl = refreshControl
     }
     func sortArray() {
-        tableView.reloadData()
-        refreshControl?.endRefreshing()
+        if let resultController = storyboard!.instantiateViewControllerWithIdentifier("MHTrangThai") as? DsThietBiTableViewController {
+            presentViewController(resultController, animated: false, completion: nil)
+        }
+        //tableView.reloadData()
+        //refreshControl?.endRefreshing()
     }
     @IBAction func ReLoad(sender: AnyObject) {
         print("Reload")
@@ -44,8 +48,9 @@ class DsThietBiTableViewController: UITableViewController {
                     let idThietBi=result["id"].stringValue
                     let TenTB = result["TenThietBi"].stringValue
                     let TrangThai=result["TrangThai"].stringValue
+                    let ReadOnly=result["ReadOnly"].stringValue
                     let temp=ThietBi()
-                    temp.SetThuocTinh(idThietBi, TenThietBi: TenTB, TrangThai: TrangThai)
+                    temp.SetThuocTinh(idThietBi, TenThietBi: TenTB, TrangThai: TrangThai,ReadOnly:ReadOnly)
                     //print(TenTB)
                     ListThietBi.append(temp)
                 }
@@ -75,15 +80,21 @@ class DsThietBiTableViewController: UITableViewController {
         let lbThietBi:UILabel=UILabel(frame: CGRectMake(20, 10, 300, 20))
         lbThietBi.text=ListThietBi[indexPath.row].TenThietBi
         cell.addSubview(lbThietBi)
-        let swTrangThai:UISwitch=UISwitch(frame: CGRectMake(300, 10, 50, 30))
-        if(ListThietBi[indexPath.row].TrangThai=="1"){
-            swTrangThai.on=true
+        if(ListThietBi[indexPath.row].ReadOnly=="0"){
+            let swTrangThai:UISwitch=UISwitch(frame: CGRectMake(300, 10, 50, 30))
+            if(ListThietBi[indexPath.row].TrangThai=="1"){
+                swTrangThai.on=true
+            }
+            idThietBi.append(ListThietBi[indexPath.row].idThietBi)
+            swTrangThai.tag=dem
+            dem++
+            swTrangThai.addTarget(self, action: "BatTatThietBi:", forControlEvents: .ValueChanged)
+            cell.addSubview(swTrangThai)
+        }else{
+            let lbTrangThai:UILabel=UILabel(frame: CGRectMake(300, 10, 50, 30))
+            lbTrangThai.text=ListThietBi[indexPath.row].TrangThai
+            cell.addSubview(lbTrangThai)
         }
-        idThietBi.append(ListThietBi[indexPath.row].idThietBi)
-        swTrangThai.tag=dem
-        dem++
-        swTrangThai.addTarget(self, action: "BatTatThietBi:", forControlEvents: .ValueChanged)
-        cell.addSubview(swTrangThai)
         return cell
     }
     func BatTatThietBi(sender:UISwitch){
@@ -95,7 +106,7 @@ class DsThietBiTableViewController: UITableViewController {
         }
     }
     func ChuyenTrangThaiThietBi(TrangThai:String,idThietBi:String){
-        let urlString = "http://smarthometl.com/index.php/?cmd="+TrangThai+"thietbi&id=149&idthietbi="+idThietBi
+        let urlString = "http://smarthometl.com/index.php/?cmd="+TrangThai+"thietbi&id="+idNguoiDung+"&idthietbi="+idThietBi
         if let url = NSURL(string: urlString) {
             if let data = try? NSData(contentsOfURL: url, options: []) {
                 let json = JSON(data: data)
