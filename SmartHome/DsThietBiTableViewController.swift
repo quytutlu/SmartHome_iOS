@@ -14,36 +14,43 @@ class DsThietBiTableViewController: UITableViewController {
     var dem:Int=0
     var ThamSoTruyen:NSUserDefaults!
     var idNguoiDung:String!
+    var messageFrame = UIView()
+    var activityIndicator = UIActivityIndicatorView()
+    var strLabel = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //tableView.scrollsToTop=false
+        UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "orientation")
         ThamSoTruyen=NSUserDefaults()
         idNguoiDung=ThamSoTruyen.valueForKey("idNguoiDung") as! String
         let urlString = "http://smarthometl.com/index.php?cmd=laytrangthai&id="+idNguoiDung
         LayDanhSachThietBi(urlString)
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: Selector("sortArray"), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Đang cập nhật...")
+        refreshControl.addTarget(self, action: Selector("UploadStt"), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
     }
-    func sortArray() {
-        if let resultController = storyboard!.instantiateViewControllerWithIdentifier("MHTrangThai") as? DsThietBiTableViewController {
+    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        UploadStt()
+    }
+    func UploadStt() {
+        if let resultController =
+            storyboard!.instantiateViewControllerWithIdentifier("MHTrangThai") as? DsThietBiTableViewController {
+                //refreshControl?.endRefreshing()
             presentViewController(resultController, animated: false, completion: nil)
         }
         //tableView.reloadData()
         //refreshControl?.endRefreshing()
-    }
-    @IBAction func ReLoad(sender: AnyObject) {
-        print("Reload")
-        dem=0
-        idThietBi.removeAll()
-        ListThietBi.removeAll()
-        //LayDanhSachThietBi()
-        self.tableView.reloadData()
     }
     func LayDanhSachThietBi(urlString:String){
         
         if let url = NSURL(string: urlString) {
             if let data = try? NSData(contentsOfURL: url, options: []) {
                 let json = JSON(data: data)
+                if(json==nil){
+                    showError()
+                    return
+                }
                 for result in json["list"].arrayValue {
                     let idThietBi=result["id"].stringValue
                     let TenTB = result["TenThietBi"].stringValue
@@ -101,8 +108,10 @@ class DsThietBiTableViewController: UITableViewController {
     func BatTatThietBi(sender:UISwitch){
         print(idThietBi[sender.tag])
         if(sender.on==true){
+            self.progressBarDisplayer("Đang bật "+ListThietBi[sender.tag].TenThietBi+"...",true)
             ChuyenTrangThaiThietBi("bat",idThietBi: idThietBi[sender.tag])
         }else{
+            self.progressBarDisplayer("Đang tắt "+ListThietBi[sender.tag].TenThietBi+"...",true)
             ChuyenTrangThaiThietBi("tat",idThietBi: idThietBi[sender.tag])
         }
     }
@@ -112,8 +121,10 @@ class DsThietBiTableViewController: UITableViewController {
             if let data = try? NSData(contentsOfURL: url, options: []) {
                 let json = JSON(data: data)
                 print(json["success"].boolValue)
+                self.messageFrame.removeFromSuperview()
             }
         }else{
+            self.messageFrame.removeFromSuperview()
             showError()
         }
     }
@@ -121,6 +132,37 @@ class DsThietBiTableViewController: UITableViewController {
         let ac = UIAlertController(title: "Loading error", message: "Lỗi kết nối mạng", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
+    }
+    func progressBarDisplayer(msg:String, _ indicator:Bool ) {
+        strLabel = UILabel(frame: CGRect(x: 50, y: 0, width: 300, height: 50))
+        strLabel.text = msg
+        strLabel.textColor = UIColor.whiteColor()
+        messageFrame = UIView(frame: CGRect(x: view.frame.midX - 90, y: view.frame.midY - 25 , width: 300, height: 50))
+        messageFrame.layer.cornerRadius = 15
+        messageFrame.center=view.center
+        //messageFrame.backgroundColor = UIColor(white: 0, alpha: 0.9)
+        messageFrame.backgroundColor=UIColor.blackColor()
+        if indicator {
+            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            activityIndicator.startAnimating()
+            messageFrame.addSubview(activityIndicator)
+        }
+        messageFrame.addSubview(strLabel)
+        view.addSubview(messageFrame)
+    }
+    override func shouldAutorotate() -> Bool {
+        // Lock autorotate
+        return false
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
+        
+        // Only allow Portrait
+        return UIInterfaceOrientation.Portrait
     }
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -20,6 +20,8 @@
 		7EC3B0851BBDA1260076C931 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0821BBDA1260076C931 /* Icon-Small.png */; settings = {ASSET_TAGS = (); }; };
 		7EC3B0861BBDA1260076C931 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */; settings = {ASSET_TAGS = (); }; };
 		7EC3B0871BBDA1260076C931 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */; settings = {ASSET_TAGS = (); }; };
+		7EC937851BBFFEC200F6C5C6 /* backgroundsh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC937841BBFFEC200F6C5C6 /* backgroundsh.jpg */; settings = {ASSET_TAGS = (); }; };
+		7EC937871BBFFF3E00F6C5C6 /* backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC937861BBFFF3E00F6C5C6 /* backgroud.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7EC3B0821BBDA1260076C931 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		7EC937841BBFFEC200F6C5C6 /* backgroundsh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundsh.jpg; sourceTree = "<group>"; };
+		7EC937861BBFFF3E00F6C5C6 /* backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroud.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +78,7 @@
 			children = (
 				7EA047E81BBECABD0082E5BA /* FBSDKLoginKit.framework */,
 				7EA047E61BBECAAE0082E5BA /* FBSDKCoreKit.framework */,
-				7EC3B0821BBDA1260076C931 /* Icon-Small.png */,
-				7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */,
-				7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */,
+				7EC937831BBFFDA600F6C5C6 /* image */,
 				7E82FEF91BBCF87600E21780 /* ThietBi.swift */,
 				7EB5F97B1BBC3B5300E8E1BD /* AppDelegate.swift */,
 				7EB5F97D1BBC3B5300E8E1BD /* ViewController.swift */,
@@ -88,6 +90,18 @@
 				7E74F3711BBCDD9600788616 /* SwiftyJSON.swift */,
 			);
 			path = SmartHome;
+			sourceTree = "<group>";
+		};
+		7EC937831BBFFDA600F6C5C6 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				7EC937861BBFFF3E00F6C5C6 /* backgroud.png */,
+				7EC937841BBFFEC200F6C5C6 /* backgroundsh.jpg */,
+				7EC3B0821BBDA1260076C931 /* Icon-Small.png */,
+				7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */,
+				7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +164,8 @@
 			files = (
 				7EC3B0871BBDA1260076C931 /* Icon-Small@3x.png in Resources */,
 				7EC3B0851BBDA1260076C931 /* Icon-Small.png in Resources */,
+				7EC937871BBFFF3E00F6C5C6 /* backgroud.png in Resources */,
+				7EC937851BBFFEC200F6C5C6 /* backgroundsh.jpg in Resources */,
 				7EB5F9861BBC3B5300E8E1BD /* LaunchScreen.storyboard in Resources */,
 				7EB5F9831BBC3B5300E8E1BD /* Assets.xcassets in Resources */,
 				7EC3B0861BBDA1260076C931 /* Icon-Small@2x.png in Resources */,
