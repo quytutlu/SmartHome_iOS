@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MHDangNhap" id="BYZ-38-t0r" customClass="ViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -54,6 +54,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" hint="UserName"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -63,7 +65,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="23"/>
+            <point key="canvasLocation" x="-3174" y="-1941"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="SOA-0q-4a7">
+            <objects>
+                <viewController storyboardIdentifier="MHChinh" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WT0-dY-Br5" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kLy-8l-Kf0"/>
+                        <viewControllerLayoutGuide type="bottom" id="G2U-cj-mRG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hNz-tp-CHu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="2pd-5j-vcf" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Fh5-m2-DFH"/>
+                        <segue destination="pDn-X9-SD0" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="1zh-6p-ucM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHo-JM-rSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1893" y="-1204"/>
         </scene>
         <!--Ds Thiet Bi Table View Controller-->
         <scene sceneID="xEh-5f-Tky">
@@ -73,17 +97,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fZj-Tb-6Dd">
-                            <rect key="frame" x="0.0" y="112" width="768" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="back"/>
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="modal" id="l3Z-FI-wY0"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kIU-xA-DLT">
-                                <rect key="frame" x="0.0" y="50" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kIU-xA-DLT" id="nha-jy-Cu4">
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -96,12 +112,200 @@
                             <outlet property="delegate" destination="SwP-GA-kvJ" id="U8i-m9-spJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Pez-DR-U69">
+                        <barButtonItem key="leftBarButtonItem" title="Open" id="0t7-zL-v1E"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Open" destination="0t7-zL-v1E" id="4bx-cs-34g"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd4-zJ-uQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="23"/>
+            <point key="canvasLocation" x="-277" y="-592"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UuN-i2-q2Y">
+            <objects>
+                <navigationController id="zYO-0R-JP1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V3h-Or-AKz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ein-6W-rYT" kind="relationship" relationship="rootViewController" id="eeP-8y-2Jc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svJ-TT-h7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1018" y="-2370"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="TyI-FA-g3O">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emk-Ux-ghv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="2pd-5j-vcf" customClass="DSMenuTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dwA-rP-IGs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cập nhật trạng thái" id="6gf-aq-iNK">
+                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gf-aq-iNK" id="e2O-Jv-pYe">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pDn-X9-SD0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="JJg-Xh-Ujh"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Thông tin cá nhân" id="1XZ-pg-A0g">
+                                <rect key="frame" x="0.0" y="94" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1XZ-pg-A0g" id="phM-3h-CEP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zYO-0R-JP1" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bpm-nj-4aE"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Giới thiệu" id="LvS-Im-dCC">
+                                <rect key="frame" x="0.0" y="138" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvS-Im-dCC" id="d9q-tw-5Yi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yKW-M6-aZo" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ivD-Em-MPd"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Đăng xuất" id="BYg-WL-VR8">
+                                <rect key="frame" x="0.0" y="182" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BYg-WL-VR8" id="BG5-V2-6V9">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="2pd-5j-vcf" id="tG1-UP-pxT"/>
+                            <outlet property="delegate" destination="2pd-5j-vcf" id="xxZ-03-ZMb"/>
+                        </connections>
+                    </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-992" y="-1591"/>
+        </scene>
+        <!--Thong Tin Ca Nhan View Controller-->
+        <scene sceneID="l8P-xp-qEE">
+            <objects>
+                <viewController id="Ein-6W-rYT" customClass="ThongTinCaNhanViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0bk-hx-ntk"/>
+                        <viewControllerLayoutGuide type="bottom" id="4X0-FI-BkR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XkB-QC-CTX">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THÔNG TIN CÁ NHÂN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsO-Ke-MQj">
+                                <rect key="frame" x="299" y="182" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EDs-nH-BNx">
+                        <barButtonItem key="leftBarButtonItem" title="Open" id="Gwf-fk-vci"/>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Open" destination="Gwf-fk-vci" id="kV5-5T-0e9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4h-kc-J8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-232" y="-2358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NFX-te-cFW">
+            <objects>
+                <navigationController id="yKW-M6-aZo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6z4-P7-p0c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XwG-hq-4QS" kind="relationship" relationship="rootViewController" id="L8m-i1-Vw0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snz-7j-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="-1622"/>
+        </scene>
+        <!--Gioi Thieu View Controller-->
+        <scene sceneID="5WL-fF-2It">
+            <objects>
+                <viewController storyboardIdentifier="MHGioiThieu" id="XwG-hq-4QS" customClass="GioiThieuViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7rR-th-Kmx"/>
+                        <viewControllerLayoutGuide type="bottom" id="gIz-LA-PwM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F6H-d3-1ye">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="jm6-1Z-j8m">
+                                <rect key="frame" x="235" y="346" width="299" height="332"/>
+                                <string key="text">Ứng dụng SmartHome cho phép người dùng theo dõi và điều khiển thiết bị điện trong nhà bằng điện thoại sử dụng hệ điều hành Android hay iOS   Thông tin tác giả Nguyễn Quý Tú Địa chỉ: Ba Vì - Hà Nội Email: quytutlu@gmail.com Phone: 01688558810</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K6G-iz-Jg9">
+                        <barButtonItem key="leftBarButtonItem" title="Open" id="Exz-6u-BGM"/>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="Open" destination="Exz-6u-BGM" id="NGP-Tg-Or0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t18-yV-CFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="-1791"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EQT-oy-JBn">
+            <objects>
+                <navigationController id="pDn-X9-SD0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A7B-VM-9r9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SwP-GA-kvJ" kind="relationship" relationship="rootViewController" id="1cj-pC-H5i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbP-c6-qdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1046" y="-810"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JJg-Xh-Ujh"/>
+    </inferredMetricsTieBreakers>
 </document>

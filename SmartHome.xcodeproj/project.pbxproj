@@ -22,6 +22,10 @@
 		7EC3B0871BBDA1260076C931 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */; settings = {ASSET_TAGS = (); }; };
 		7EC937851BBFFEC200F6C5C6 /* backgroundsh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC937841BBFFEC200F6C5C6 /* backgroundsh.jpg */; settings = {ASSET_TAGS = (); }; };
 		7EC937871BBFFF3E00F6C5C6 /* backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC937861BBFFF3E00F6C5C6 /* backgroud.png */; settings = {ASSET_TAGS = (); }; };
+		7EC9378C1BC01F5300F6C5C6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC9378B1BC01F5300F6C5C6 /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7EC937921BC0303000F6C5C6 /* DSMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC937911BC0303000F6C5C6 /* DSMenuTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7EC937941BC044A300F6C5C6 /* GioiThieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC937931BC044A300F6C5C6 /* GioiThieuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7EC937961BC046FD00F6C5C6 /* ThongTinCaNhanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC937951BC046FD00F6C5C6 /* ThongTinCaNhanViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,12 @@
 		7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		7EC937841BBFFEC200F6C5C6 /* backgroundsh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundsh.jpg; sourceTree = "<group>"; };
 		7EC937861BBFFF3E00F6C5C6 /* backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroud.png; sourceTree = "<group>"; };
+		7EC937891BC01F5200F6C5C6 /* SmartHome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartHome-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EC9378A1BC01F5300F6C5C6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		7EC9378B1BC01F5300F6C5C6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		7EC937911BC0303000F6C5C6 /* DSMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSMenuTableViewController.swift; sourceTree = "<group>"; };
+		7EC937931BC044A300F6C5C6 /* GioiThieuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GioiThieuViewController.swift; sourceTree = "<group>"; };
+		7EC937951BC046FD00F6C5C6 /* ThongTinCaNhanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThongTinCaNhanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,7 @@
 		7EB5F97A1BBC3B5300E8E1BD /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				7EC937881BC01F3200F6C5C6 /* ThuVien */,
 				7EA047E81BBECABD0082E5BA /* FBSDKLoginKit.framework */,
 				7EA047E61BBECAAE0082E5BA /* FBSDKCoreKit.framework */,
 				7EC937831BBFFDA600F6C5C6 /* image */,
@@ -88,6 +99,9 @@
 				7EB5F9871BBC3B5300E8E1BD /* Info.plist */,
 				7EB5F98D1BBC3C6D00E8E1BD /* DsThietBiTableViewController.swift */,
 				7E74F3711BBCDD9600788616 /* SwiftyJSON.swift */,
+				7EC937911BC0303000F6C5C6 /* DSMenuTableViewController.swift */,
+				7EC937931BC044A300F6C5C6 /* GioiThieuViewController.swift */,
+				7EC937951BC046FD00F6C5C6 /* ThongTinCaNhanViewController.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -102,6 +116,16 @@
 				7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		7EC937881BC01F3200F6C5C6 /* ThuVien */ = {
+			isa = PBXGroup;
+			children = (
+				7EC9378A1BC01F5300F6C5C6 /* SWRevealViewController.h */,
+				7EC9378B1BC01F5300F6C5C6 /* SWRevealViewController.m */,
+				7EC937891BC01F5200F6C5C6 /* SmartHome-Bridging-Header.h */,
+			);
+			name = ThuVien;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +154,7 @@
 		7EB5F9701BBC3B5300E8E1BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = quytutlu;
 				TargetAttributes = {
@@ -180,11 +205,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC937961BC046FD00F6C5C6 /* ThongTinCaNhanViewController.swift in Sources */,
 				7EB5F97E1BBC3B5300E8E1BD /* ViewController.swift in Sources */,
 				7EB5F98E1BBC3C6D00E8E1BD /* DsThietBiTableViewController.swift in Sources */,
 				7EB5F97C1BBC3B5300E8E1BD /* AppDelegate.swift in Sources */,
 				7E82FEFA1BBCF87600E21780 /* ThietBi.swift in Sources */,
+				7EC937921BC0303000F6C5C6 /* DSMenuTableViewController.swift in Sources */,
 				7E74F3721BBCDD9600788616 /* SwiftyJSON.swift in Sources */,
+				7EC937941BC044A300F6C5C6 /* GioiThieuViewController.swift in Sources */,
+				7EC9378C1BC01F5300F6C5C6 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -309,6 +339,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = quytutlu.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartHome/SmartHome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -316,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -328,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = quytutlu.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartHome/SmartHome-Bridging-Header.h";
 			};
 			name = Release;
 		};

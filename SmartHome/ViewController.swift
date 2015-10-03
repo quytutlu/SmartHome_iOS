@@ -105,7 +105,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate
                 self.messageFrame.removeFromSuperview()
                 if(json["active"].stringValue=="1"){
                     ThamSoTruyen.setObject(String(json["id"].stringValue), forKey: "idNguoiDung")
-                    if let resultController = storyboard!.instantiateViewControllerWithIdentifier("MHTrangThai") as? DsThietBiTableViewController {
+                    if let resultController = storyboard!.instantiateViewControllerWithIdentifier("MHChinh") as? SWRevealViewController {
                         presentViewController(resultController, animated: true, completion: nil)
                     }
                 }else{
