@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E74F3721BBCDD9600788616 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E74F3711BBCDD9600788616 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
 		7E82FEFA1BBCF87600E21780 /* ThietBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E82FEF91BBCF87600E21780 /* ThietBi.swift */; settings = {ASSET_TAGS = (); }; };
+		7EA047E71BBECAAE0082E5BA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA047E61BBECAAE0082E5BA /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		7EA047E91BBECABD0082E5BA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA047E81BBECABD0082E5BA /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		7EB5F97C1BBC3B5300E8E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F97B1BBC3B5300E8E1BD /* AppDelegate.swift */; };
 		7EB5F97E1BBC3B5300E8E1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5F97D1BBC3B5300E8E1BD /* ViewController.swift */; };
 		7EB5F9811BBC3B5300E8E1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5F97F1BBC3B5300E8E1BD /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		7E74F3711BBCDD9600788616 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../../../../Users/QuyTuTLU/Downloads/HackingWithSwift-master/project7/Project7/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		7E82FEF91BBCF87600E21780 /* ThietBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThietBi.swift; sourceTree = "<group>"; };
+		7EA047E61BBECAAE0082E5BA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		7EA047E81BBECABD0082E5BA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		7EB5F9781BBC3B5300E8E1BD /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB5F97B1BBC3B5300E8E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EB5F97D1BBC3B5300E8E1BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA047E91BBECABD0082E5BA /* FBSDKLoginKit.framework in Frameworks */,
+				7EA047E71BBECAAE0082E5BA /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 		7EB5F97A1BBC3B5300E8E1BD /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				7EA047E81BBECABD0082E5BA /* FBSDKLoginKit.framework */,
+				7EA047E61BBECAAE0082E5BA /* FBSDKCoreKit.framework */,
 				7EC3B0821BBDA1260076C931 /* Icon-Small.png */,
 				7EC3B0831BBDA1260076C931 /* Icon-Small@2x.png */,
 				7EC3B0841BBDA1260076C931 /* Icon-Small@3x.png */,
@@ -275,6 +283,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome",
+				);
 				INFOPLIST_FILE = SmartHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -290,6 +302,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome",
+				);
 				INFOPLIST_FILE = SmartHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
