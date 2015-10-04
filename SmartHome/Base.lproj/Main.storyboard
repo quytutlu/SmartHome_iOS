@@ -67,6 +67,22 @@
             </objects>
             <point key="canvasLocation" x="-3174" y="-1941"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n55-dg-bVi">
+            <objects>
+                <navigationController id="5K0-Lv-R5e" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="usJ-lK-hZG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2pd-5j-vcf" kind="relationship" relationship="rootViewController" id="OX8-qZ-Iow"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Vs-AF-UlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1872" y="-1967"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="SOA-0q-4a7">
             <objects>
@@ -81,8 +97,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="2pd-5j-vcf" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Fh5-m2-DFH"/>
                         <segue destination="pDn-X9-SD0" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="1zh-6p-ucM"/>
+                        <segue destination="5K0-Lv-R5e" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="80J-TG-DPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHo-JM-rSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,7 +160,6 @@
         <!--Menu Table View Controller-->
         <scene sceneID="TyI-FA-g3O">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="emk-Ux-ghv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="2pd-5j-vcf" customClass="DSMenuTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dwA-rP-IGs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -152,7 +167,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cập nhật trạng thái" id="6gf-aq-iNK">
-                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gf-aq-iNK" id="e2O-Jv-pYe">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -163,7 +178,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Thông tin cá nhân" id="1XZ-pg-A0g">
-                                <rect key="frame" x="0.0" y="94" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="158" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1XZ-pg-A0g" id="phM-3h-CEP">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -174,7 +189,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Giới thiệu" id="LvS-Im-dCC">
-                                <rect key="frame" x="0.0" y="138" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="202" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvS-Im-dCC" id="d9q-tw-5Yi">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -185,7 +200,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Đăng xuất" id="BYg-WL-VR8">
-                                <rect key="frame" x="0.0" y="182" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="246" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BYg-WL-VR8" id="BG5-V2-6V9">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -199,8 +214,12 @@
                             <outlet property="delegate" destination="2pd-5j-vcf" id="xxZ-03-ZMb"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="qcJ-jS-h9X">
+                        <barButtonItem key="leftBarButtonItem" title="Danh Mục" id="bdq-Xo-tnr"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emk-Ux-ghv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-992" y="-1591"/>
         </scene>
@@ -217,11 +236,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THÔNG TIN CÁ NHÂN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsO-Ke-MQj">
-                                <rect key="frame" x="299" y="182" width="171" height="21"/>
+                                <rect key="frame" x="285" y="182" width="199" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-a3-bJh">
+                                <rect key="frame" x="198" y="278" width="373" height="279"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -232,6 +256,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="Open" destination="Gwf-fk-vci" id="kV5-5T-0e9"/>
+                        <outlet property="ttcn" destination="NqO-a3-bJh" id="x7k-5x-WUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4h-kc-J8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,7 +277,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Snz-7j-Eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-277" y="-1622"/>
+            <point key="canvasLocation" x="-263" y="-1498"/>
         </scene>
         <!--Gioi Thieu View Controller-->
         <scene sceneID="5WL-fF-2It">

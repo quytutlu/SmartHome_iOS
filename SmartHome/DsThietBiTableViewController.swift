@@ -82,18 +82,20 @@ class DsThietBiTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50
+    }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ListThietBi.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let lbThietBi:UILabel=UILabel(frame: CGRectMake(20, 10, 300, 20))
+        let lbThietBi:UILabel=UILabel(frame: CGRectMake(20, 15, 300, 20))
         lbThietBi.text=ListThietBi[indexPath.row].TenThietBi
         cell.addSubview(lbThietBi)
         if(ListThietBi[indexPath.row].ReadOnly=="0"){
-            let swTrangThai:UISwitch=UISwitch(frame: CGRectMake(650, 5, 50, 30))
+            let swTrangThai:UISwitch=UISwitch(frame: CGRectMake(650, 10, 50, 30))
             if(ListThietBi[indexPath.row].TrangThai=="1"){
                 swTrangThai.on=true
             }
